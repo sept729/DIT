@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08070d">
+  <meta name="description" content="DIT Shop — subscriptions, server boosts, game items and social growth services, delivered fast with replacement cover.">
+  <meta property="og:title" content="DIT Shop">
+  <meta property="og:description" content="Subscriptions, server boosts, game items and social growth services. Fast delivery, replacement cover, crypto or PayPal.">
+  <meta property="og:type" content="website">
+  <title>DIT Shop — digital goods, delivered fast</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══ مكتبة الأيقونات (SVG sprite) — بديل الإيموجي، تتلوّن مع النص ══ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.5 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.9z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 127.14 96.36"><path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.27 9.76A7.08 7.08 0 0 1 12 4.91c1.69 0 3.22.6 4.42 1.58l3.51-3.51C17.64 1.05 14.91 0 12 0 7.35 0 3.31 2.67 1.24 6.58l4.03 3.18z"/><path fill="#FBBC05" d="M1.24 6.58a7.03 7.03 0 0 0 0 10.84l4.03-3.19a4.16 4.16 0 0 1 0-4.47L1.24 6.58z"/><path fill="#4285F4" d="M23.49 12.28c0-.8-.07-1.57-.2-2.31H12v4.55h6.46a5.52 5.52 0 0 1-2.4 3.62l3.74 2.9c2.18-2.01 3.49-4.97 3.49-8.76z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.74-2.9c-1.03.69-2.36 1.11-4.2 1.11-3.41 0-6.3-2.31-7.33-5.41l-4.02 3.19C3.31 21.33 7.35 24 12 24z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ══ Header ══ -->
+<header class="site-header">
+  <div class="shell">
+    <div class="header-bar">
+      <a class="brand" href="#/home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>DIT <em>Shop</em></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a class="nav-link" href="#/home" data-route-link="home">Home</a>
+        <a class="nav-link" href="#/shop" data-route-link="shop">Shop</a>
+        <a class="nav-link" href="#/orders" data-route-link="orders">My orders</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn icon-btn--discord" href="https://discord.gg/cQcpQyCZY"
+           target="_blank" rel="noopener noreferrer" title="Join our Discord">
+          <svg aria-hidden="true"><use href="#i-discord"></use></svg>
+          <span class="visually-hidden">Join our Discord server</span>
+        </a>
+
+        <button class="icon-btn" id="cart-button" aria-label="Open cart, 0 items">
+          <svg aria-hidden="true"><use href="#i-cart"></use></svg>
+          <span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+
+        <button class="btn btn--ghost btn--sm" id="account-button">
+          <svg aria-hidden="true"><use href="#i-user"></use></svg>
+          <span id="account-label">Sign in</span>
+        </button>
+
+        <button class="icon-btn nav-toggle" id="nav-toggle"
+                aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Main (mobile)">
+      <a class="nav-link" href="#/home" data-route-link="home">Home</a>
+      <a class="nav-link" href="#/shop" data-route-link="shop">Shop</a>
+      <a class="nav-link" href="#/orders" data-route-link="orders">My orders</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ Home ══ -->
+  <section class="view shell" id="view-home" aria-labelledby="home-title">
+    <div class="hero">
+      <span class="eyebrow">
+        <svg aria-hidden="true" width="14" height="14"><use href="#i-bolt"></use></svg>
+        Most orders delivered in under an hour
+      </span>
+      <h1 id="home-title">Digital goods, without the waiting.</h1>
+      <p>Subscriptions, Discord boosts, game items and social growth services — ordered in a few taps and delivered to your Discord ticket.</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#/shop">
+          <svg aria-hidden="true"><use href="#i-cart"></use></svg>
+          Browse the shop
+        </a>
+        <a class="btn btn--ghost" href="https://discord.gg/cQcpQyCZY" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#i-discord"></use></svg>
+          Talk to us on Discord
+        </a>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>Why order here</h2>
+    </div>
+    <div class="trust-grid">
+      <article class="trust-card">
+        <div class="trust-icon"><svg aria-hidden="true"><use href="#i-bolt"></use></svg></div>
+        <h3>Fast delivery</h3>
+        <p>Keys and accounts usually arrive within 10 minutes. Anything manual is delivered within 48 hours at the latest.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-icon"><svg aria-hidden="true"><use href="#i-shield"></use></svg></div>
+        <h3>Replacement cover</h3>
+        <p>If something stops working during its warranty window, open a ticket and we replace it. No arguing about it.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-icon"><svg aria-hidden="true"><use href="#i-lock"></use></svg></div>
+        <h3>Pay how you like</h3>
+        <p>PayPal, Litecoin, Solana or USDT. Every order gets a reference you can track from your account.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-icon"><svg aria-hidden="true"><use href="#i-tag"></use></svg></div>
+        <h3>Straight pricing</h3>
+        <p>The price on the card is the price you pay. No hidden fees added at checkout.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══ Shop ══ -->
+  <section class="view shell" id="view-shop" aria-labelledby="shop-title">
+    <div class="section-head">
+      <h2 id="shop-title">Shop</h2>
+      <p>Pick a category, choose a plan, and add it to your cart.</p>
+    </div>
+
+    <div class="shop-toolbar">
+      <div class="search-field">
+        <svg aria-hidden="true"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="product-search">Search products</label>
+        <input type="search" id="product-search" placeholder="Search products…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="category-bar" id="category-bar" role="group" aria-label="Product categories"></div>
+
+    <p class="visually-hidden" id="results-status" role="status" aria-live="polite"></p>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <!-- ══ Orders ══ -->
+  <section class="view shell" id="view-orders" aria-labelledby="orders-title">
+    <div class="section-head">
+      <h2 id="orders-title">My orders</h2>
+      <p>Every order you've placed with this account, newest first.</p>
+    </div>
+    <div id="orders-list"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>&copy; <span id="year">2026</span> <strong>DIT Shop</strong>. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://discord.gg/cQcpQyCZY" target="_blank" rel="noopener noreferrer">Support</a>
+      <a href="#/shop">Shop</a>
+      <a href="#/orders">My orders</a>
+      <a href="Privacy PolicyPrivacy Policy.html">Privacy</a>
+    </div>
+    <p>Powered by <span style="color:var(--cyan)">SEPT</span></p>
+  </div>
+</footer>
+
+<!-- ══ Dialog: account ══ -->
+<div class="overlay" id="auth-overlay" data-dialog hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <button class="dialog-close" data-dialog-close aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+
+    <div class="dialog-head">
+      <h2 id="auth-title">Sign in</h2>
+      <p id="auth-subtitle">Sign in to place an order and follow its progress.</p>
+    </div>
+
+    <div class="dialog-body">
+      <button class="btn btn--ghost btn--block" id="google-auth">
+        <svg aria-hidden="true"><use href="#i-google"></use></svg>
+        Continue with Google
+      </button>
+
+      <p class="divider">or</p>
+
+      <p class="form-alert" id="auth-error" role="alert" hidden></p>
+
+      <div class="field" id="name-field" hidden>
+        <label for="auth-name">Your name</label>
+        <input class="input" type="text" id="auth-name" autocomplete="name" placeholder="Alex">
+      </div>
+
+      <div class="field">
+        <label for="auth-email">Email</label>
+        <input class="input" type="email" id="auth-email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="auth-password">Password</label>
+        <input class="input" type="password" id="auth-password" autocomplete="current-password" placeholder="At least 6 characters" required>
+        <p class="hint" id="password-hint" hidden>Use at least 6 characters.</p>
+      </div>
+    </div>
+
+    <div class="dialog-foot">
+      <button class="btn btn--primary btn--block" id="auth-submit">Sign in</button>
+      <p style="text-align:center;margin-top:1rem;color:var(--text-dim);font-size:.9rem">
+        <span id="auth-switch-text">New here?</span>
+        <button class="text-link" id="auth-switch">Create an account</button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Dialog: product ══ -->
+<div class="overlay" id="product-overlay" data-dialog hidden>
+  <div class="dialog dialog--wide" role="dialog" aria-modal="true" aria-labelledby="product-title">
+    <button class="dialog-close" data-dialog-close aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <div class="dialog-head">
+      <h2 id="product-title"></h2>
+      <p id="product-description"></p>
+    </div>
+    <div class="dialog-body">
+      <div class="notice notice--warn" id="product-minimum" hidden>
+        <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+        <span id="product-minimum-text"></span>
+      </div>
+      <div class="plan-list" id="plan-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Dialog: cart ══ -->
+<div class="overlay overlay--sheet" id="cart-overlay" data-dialog hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <button class="dialog-close" data-dialog-close aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+    <div class="dialog-head">
+      <h2 id="cart-title">Your cart</h2>
+      <p id="cart-subtitle">Nothing here yet.</p>
+    </div>
+    <div class="dialog-body">
+      <div class="notice notice--warn" id="cart-minimum" hidden>
+        <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+        <span id="cart-minimum-text"></span>
+      </div>
+      <div class="cart-list" id="cart-list"></div>
+    </div>
+    <div class="dialog-foot" id="cart-foot" hidden>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button class="btn btn--primary btn--block" id="checkout-button">Continue to checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Dialog: checkout ══ -->
+<div class="overlay" id="checkout-overlay" data-dialog hidden>
+  <div class="dialog dialog--wide" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <button class="dialog-close" data-dialog-close aria-label="Close">
+      <svg aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+
+    <div class="dialog-head">
+      <h2 id="checkout-title">Checkout</h2>
+    </div>
+
+    <div class="dialog-body">
+      <ol class="stepper" id="checkout-stepper">
+        <li data-step="1" data-state="current"><span class="dot">1</span><span class="label">Contact</span></li>
+        <li data-step="2"><span class="dot">2</span><span class="label">Payment</span></li>
+        <li data-step="3"><span class="dot">3</span><span class="label">Confirm</span></li>
+      </ol>
+
+      <!-- Step 1 -->
+      <div class="step-panel" data-panel="1">
+        <div class="notice notice--info">
+          <svg aria-hidden="true"><use href="#i-info"></use></svg>
+          <span>We deliver through Discord, so we need a handle we can reach you on.</span>
+        </div>
+        <div class="field">
+          <label for="checkout-contact">Discord username</label>
+          <input class="input" type="text" id="checkout-contact" placeholder="yourname" autocomplete="off">
+          <p class="hint">Example: <code>alexdev</code> — the name shown on your Discord profile.</p>
+          <p class="field-error" id="contact-error" hidden></p>
+        </div>
+        <button class="btn btn--primary btn--block" id="to-payment">Continue to payment</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-panel" data-panel="2" hidden>
+        <p style="color:var(--text-dim);font-size:.9375rem;margin-bottom:1rem">
+          Total to send: <strong id="checkout-amount" style="color:var(--ok);font-family:var(--font-display)">$0.00</strong>
+        </p>
+
+        <div class="pay-methods" id="pay-methods" role="group" aria-label="Payment method">
+          <button class="pay-option" data-method="paypal" aria-pressed="false">PayPal</button>
+          <button class="pay-option" data-method="ltc" aria-pressed="false">Litecoin</button>
+          <button class="pay-option" data-method="sol" aria-pressed="false">Solana</button>
+          <button class="pay-option" data-method="usdt" aria-pressed="false">USDT (BEP20)</button>
+        </div>
+
+        <div class="address-box" id="address-box" hidden>
+          <label for="pay-address" id="address-label">Send payment to</label>
+          <div class="address-row">
+            <input type="text" id="pay-address" readonly>
+            <button class="btn btn--outline" id="copy-address">
+              <svg aria-hidden="true"><use href="#i-copy"></use></svg>
+              Copy
+            </button>
+          </div>
+          <p class="hint" id="address-note" style="margin-top:.75rem"></p>
+        </div>
+
+        <div style="display:flex;gap:.75rem;margin-top:1.5rem">
+          <button class="btn btn--ghost" id="back-to-contact">
+            <svg aria-hidden="true"><use href="#i-back"></use></svg>
+            Back
+          </button>
+          <button class="btn btn--primary" style="flex:1" id="place-order">I've sent the payment</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-panel" data-panel="3" hidden style="text-align:center">
+        <div class="trust-icon" style="margin:0 auto 1rem;width:52px;height:52px;background:var(--ok-soft);color:var(--ok);border-radius:var(--r-full);display:grid;place-items:center">
+          <svg aria-hidden="true" style="width:26px;height:26px"><use href="#i-check"></use></svg>
+        </div>
+        <h3 style="font-size:1.375rem;margin-bottom:.75rem">Order received</h3>
+        <p style="color:var(--text-dim);font-size:.9375rem;max-width:42ch;margin:0 auto 1.5rem">
+          Your reference is <strong id="order-reference" style="color:var(--cyan);font-family:var(--font-display)"></strong>.
+          Open a ticket on Discord with your payment screenshot and we'll take it from there.
+        </p>
+        <a class="btn btn--discord" href="https://discord.gg/cQcpQyCZY" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#i-discord"></use></svg>
+          Open a Discord ticket
+        </a>
+        <p style="margin-top:1rem">
+          <a href="#/orders" data-dialog-close style="font-size:.875rem">View it in My orders</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-dock" id="toast-dock" role="region" aria-label="Notifications"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

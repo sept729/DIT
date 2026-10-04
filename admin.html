@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07070a">
+  <meta name="robots" content="noindex, nofollow">
+  <title>DIT Shop — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5"/><path d="M17 13h.01"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 4.5 4h15L21 9M3 9v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9M3 9h18"/><path d="M9 21v-6h6v6"/></symbol>
+</svg>
+
+<!-- ══ Login gate ══ -->
+<div id="login-gate">
+  <div class="gate-card">
+    <h1>Admin sign in</h1>
+    <p>This area is for the shop owner only.</p>
+
+    <p class="form-alert" id="gate-error" role="alert" hidden></p>
+
+    <div class="field">
+      <label for="gate-email">Email</label>
+      <input class="input" type="email" id="gate-email" autocomplete="username" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label for="gate-password">Password</label>
+      <input class="input" type="password" id="gate-password" autocomplete="current-password" placeholder="••••••••">
+    </div>
+    <button class="btn btn--primary btn--block" id="gate-submit">Sign in</button>
+  </div>
+</div>
+
+<!-- ══ Workspace ══ -->
+<div class="admin-shell" id="workspace" hidden>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="mark" aria-hidden="true">D</span>
+      <span>DIT Admin</span>
+    </div>
+
+    <nav class="side-nav" aria-label="Admin sections">
+      <button type="button" data-panel-link="orders" aria-current="true">
+        <svg aria-hidden="true"><use href="#i-inbox"></use></svg> Orders
+      </button>
+      <button type="button" data-panel-link="catalogue">
+        <svg aria-hidden="true"><use href="#i-grid"></use></svg> Catalogue
+      </button>
+      <button type="button" data-panel-link="payments">
+        <svg aria-hidden="true"><use href="#i-wallet"></use></svg> Payment details
+      </button>
+    </nav>
+
+    <dl class="side-stats">
+      <div class="stat"><dt>Waiting</dt><dd id="stat-pending">0</dd></div>
+      <div class="stat"><dt>Delivered</dt><dd id="stat-done">0</dd></div>
+      <div class="stat"><dt>Products</dt><dd id="stat-products">0</dd></div>
+    </dl>
+
+    <div class="sidebar-foot">
+      <a class="btn btn--ghost" href="index.html" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-store"></use></svg> View shop
+      </a>
+      <button class="btn btn--ghost" id="sign-out">
+        <svg aria-hidden="true"><use href="#i-out"></use></svg> Sign out
+      </button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <!-- ── Orders ── -->
+    <section class="panel is-active" id="panel-orders" aria-labelledby="orders-heading">
+      <div class="panel-head">
+        <h2 id="orders-heading">Orders</h2>
+        <p>Newest first. Mark an order delivered once you've handed over the goods.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="grow">
+          <label class="visually-hidden" for="order-search">Search orders</label>
+          <input class="input" type="search" id="order-search" placeholder="Search by reference, email or Discord handle…">
+        </div>
+        <div class="filter-group" role="group" aria-label="Filter by status">
+          <button class="filter-chip" type="button" data-status="pending" aria-pressed="true">Waiting</button>
+          <button class="filter-chip" type="button" data-status="completed" aria-pressed="false">Delivered</button>
+          <button class="filter-chip" type="button" data-status="cancelled" aria-pressed="false">Cancelled</button>
+          <button class="filter-chip" type="button" data-status="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+
+      <div id="orders-list"></div>
+    </section>
+
+    <!-- ── Catalogue ── -->
+    <section class="panel" id="panel-catalogue" aria-labelledby="catalogue-heading">
+      <div class="panel-head">
+        <h2 id="catalogue-heading">Catalogue</h2>
+        <p>Categories hold products, and each product holds one or more priced options.</p>
+      </div>
+
+      <div class="card">
+        <h3>Categories</h3>
+        <div class="row" style="margin-bottom:1rem">
+          <input class="input" type="text" id="new-category-name" placeholder="Category name, e.g. Streaming">
+          <button class="btn btn--primary shrink" id="add-category">Add category</button>
+        </div>
+        <div id="categories-list"></div>
+      </div>
+
+      <div class="card">
+        <h3 id="product-form-heading">Add a product</h3>
+        <p>Options are what the customer picks — a duration, a size, a tier.</p>
+
+        <form id="product-form">
+          <input type="hidden" id="edit-category-id">
+          <input type="hidden" id="edit-product-index">
+
+          <div class="field">
+            <label for="product-category">Category</label>
+            <select class="input" id="product-category" required></select>
+          </div>
+
+          <div class="field">
+            <label for="product-name">Product name</label>
+            <input class="input" type="text" id="product-name" placeholder="Netflix Premium" required>
+          </div>
+
+          <div class="field">
+            <label for="product-description">Description</label>
+            <textarea class="input" id="product-description" placeholder="What the customer gets, and what the warranty covers." required></textarea>
+            <p class="hint">Shown on the product card. Two short sentences works best.</p>
+          </div>
+
+          <div class="field">
+            <label for="product-image">Image URL <span style="font-weight:500;color:var(--text-faint)">(optional)</span></label>
+            <input class="input" type="url" id="product-image" placeholder="https://…">
+          </div>
+
+          <div class="field">
+            <label>Options and prices</label>
+            <div id="plans-repeater"></div>
+            <button class="btn btn--ghost btn--sm" type="button" id="add-plan" style="margin-top:.5rem">+ Add an option</button>
+            <p class="hint">At least one option is required.</p>
+          </div>
+
+          <div class="row">
+            <button class="btn btn--primary" type="submit" id="save-product">Save product</button>
+            <button class="btn btn--ghost shrink" type="button" id="cancel-edit" hidden>Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>All products</h3>
+        <div class="toolbar">
+          <div class="grow">
+            <label class="visually-hidden" for="product-search">Search products</label>
+            <input class="input" type="search" id="product-search" placeholder="Search products…">
+          </div>
+        </div>
+        <div id="products-list"></div>
+      </div>
+    </section>
+
+    <!-- ── Payments ── -->
+    <section class="panel" id="panel-payments" aria-labelledby="payments-heading">
+      <div class="panel-head">
+        <h2 id="payments-heading">Payment details</h2>
+        <p>These are shown to customers at checkout. Double-check every character before saving.</p>
+      </div>
+
+      <div class="card">
+        <p class="form-alert" id="payments-alert" role="alert" hidden></p>
+
+        <div class="field">
+          <label for="gw-paypal">PayPal email</label>
+          <input class="input" type="email" id="gw-paypal" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="gw-ltc">Litecoin address</label>
+          <input class="input" type="text" id="gw-ltc" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="gw-sol">Solana address</label>
+          <input class="input" type="text" id="gw-sol" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="gw-usdt">USDT address (BEP20)</label>
+          <input class="input" type="text" id="gw-usdt" spellcheck="false">
+        </div>
+
+        <button class="btn btn--primary" id="save-gateways">Save payment details</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast-dock" id="toast-dock" role="region" aria-label="Notifications"></div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
